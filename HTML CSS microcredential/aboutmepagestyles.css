@@ -1,0 +1,551 @@
+/*This is the CSS file for aboutme.html*/
+
+/*I have used CSS GRID for the visual structure of my capstone project*/
+
+body.home_body{
+    background-color:grey;
+    }
+
+    header.aboutmepg_button_sel_container{
+        grid-area: header;
+        text-align:center;
+        height:600px;
+    }
+
+    h1.aboutmepage_heading{
+        font-size:100px;
+        color:white;
+    }
+
+
+/* navigation menu */
+div.navigation_menu_container{
+    grid-area: menu;
+    box-sizing:border-box;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:165px;
+    display:block;
+    height:100px;
+    width:800px;
+    margin-top:5px;
+}
+
+div.home_link_container{
+    box-sizing:border-box;
+    height:60px;
+    width:100px;
+}
+
+a.homepagelink{
+    font-size:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+a.homepagelink:hover{
+    cursor:pointer;
+    opacity:70%;
+}
+
+a.homepagelink:active{
+    background-color:lightblue;
+    opacity:100%;
+}
+
+div.aboutme_link_container{
+    box-sizing:border-box;
+    height:60px;
+    width:125px;
+    margin-left:200px;
+    margin-top:-80px;
+}
+
+a.aboutmelink{
+    font-size:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+a.aboutmelink:hover{
+    cursor:pointer;
+    opacity:70%;
+}
+
+a.aboutmelink:active{
+    background-color:lightblue;
+    opacity:100%;
+}
+
+div.projects_link_container{
+    box-sizing:border-box;
+    height:60px;
+    width:125px;
+    margin-left:450px;
+    margin-top:-80px;
+}
+
+a.projectslink{
+    font-size:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+a.projectslink:hover{
+    cursor:pointer;
+    opacity:70%;
+}
+
+a.projectslink:active{
+    background-color:lightblue;
+    opacity:100%;
+}
+
+div.contacts_link_container{
+    box-sizing:border-box;
+    height:60px;
+    width:125px;
+    float:right;
+    margin-top:-80px;
+}
+
+a.contactmelink{
+    font-size:30px;
+    text-decoration:none;
+    color:white;
+    transition:0.3s;
+}
+
+a.contactmelink:hover{
+    cursor:pointer;
+    opacity:70%;
+}
+
+a.contactmelink:active{
+    background-color:lightblue;
+    opacity:100%;
+}
+
+/*main container for about me page*/
+div.aboutmepage_maincontent_container{
+    grid-area: content;
+    box-sizing: border-box;
+    height:2500px;
+    width:1500px;
+    border:5px solid rgb(185, 185, 185);
+    border-style:double;
+    border-width: 20px;
+    border-radius: 20px;
+    margin-right:auto;
+    margin-left:auto;
+    float:center;
+}
+
+h3.personal_photo{
+    color:white;
+    text-align:center;
+    font-size:50px;
+}
+
+img.self_photo{
+    width:350px; 
+    height:250px;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+    float:none;
+}
+
+h2.aboutme_desc_heading{
+    text-align:center;
+    font-size:50px;
+    color:white;
+}
+
+div p.aboutme_desc_para{
+    box-sizing:border-box;
+    font-size:30px;
+    color:lightblue;
+    text-align:center;
+    column-count:2;
+    column-width: 15px;
+    column-gap:30px;
+    column-rule-style:solid;
+    column-rule-color:lightblue;
+}
+
+h2.aboutme_educ_heading{
+    font-size:50px;
+    text-align:center;
+    color:white;
+}
+
+div p.aboutme_educ_para{
+    box-sizing:border-box;
+    font-size:30px;
+    color:lightblue;
+    text-align:center;
+    column-count:3;
+    column-gap:15px;
+    column-rule-style:solid;
+    column-rule-color:lightblue;
+}
+
+div.table_container{
+    height:200px;
+    width:600px;
+    margin-right:auto;
+    margin-left:auto;
+    display:block;
+    padding:100px;
+}
+
+table.certs_table{
+    border-collapse:collapse; 
+    border: 3px solid black;
+    float:center;
+    margin-right:auto;
+    margin-left:auto;
+    display:auto;
+}
+
+caption.table_cap{
+    font-size:30px;
+    color:white;
+}
+
+thead.certs_table_head_section{
+    background-color:rgb(165, 165, 255); 
+    border:3px solid black; 
+    height:60px;
+}
+
+th.table_headers{
+    border:3px solid black; 
+    width:200px;
+    font-size:30px;
+}
+
+tr.table_rows{
+    border:3px solid black; 
+    background-color:lightgrey; 
+    text-align:center; 
+    height:125px; 
+    width:300px;
+}
+
+td.table_cells{
+    border:3px solid black;
+    font-size:30px;
+}
+
+a.itf_link{
+    color:black;
+    transition:0.3s;
+}
+
+a.itf_link:hover{
+color:rgb(212, 74, 74);
+}
+
+a.a_link{
+    color:black;
+    transition:0.3s;
+}
+
+a.a_link:hover{
+    color:rgb(212, 74, 74);
+    }
+
+a.network_link{
+    color:black;
+    transition:0.3s;
+}
+
+a.network_link:hover{
+    color:rgb(212, 74, 74);
+    }
+
+a.sec_link{
+    color:black;
+    transition:0.3s;
+}
+
+a.sec_link:hover{
+    color:rgb(212, 74, 74);
+    }
+
+    footer.allpages_footer_container{
+        height:200px;
+        background-color:rgb(69, 156, 185);
+        text-align:center;
+        margin:-8px;
+        margin-top:50px;
+        grid-area: footer;
+    }
+    
+    p.myname{
+        font-size:20px;
+    }
+
+    img.itfpic{
+        height:100px;
+        width:100px;
+    }
+
+    img.itfpic:hover{
+        cursor:pointer;
+        opacity:80%;
+    }
+
+    img.apluspic{
+        height:100px;
+        width:100px;
+    }
+
+    img.apluspic:hover{
+        cursor:pointer;
+        opacity:80%;
+    }
+
+    img.networkpluspic{
+        height:100px;
+        width:100px;
+    }
+
+    img.networkpluspic:hover{
+        cursor:pointer;
+        opacity:80%;
+    }
+
+    img.securitypluspic{
+        height:100px;
+        width:100px;
+    }
+
+    img.securitypluspic:hover{
+        cursor:pointer;
+        opacity:80%;
+    }
+
+    div.table_container{
+        height:auto;
+        width:auto;
+    }
+
+    div.skills_container{
+        height:300px;
+        width:800px;
+        margin-right:auto;
+        margin-left:auto;
+        display:block;
+    }
+
+    h2.skills_heading{
+        font-size:50px;
+        color:white;
+        text-align:center;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    img.htmllogopic{
+        height:200px;
+        width:200px;
+        transition:0.3s;
+    }
+
+    img.htmllogopic:hover{
+        opacity:80%;
+    }
+   
+    img.csslogopic{
+        height:200px;
+        width:150px;
+        transition:0.3s;
+    }
+
+    img.csslogopic:hover{
+        opacity:80%;
+    }
+
+    img.jslogopic{
+        height:200px;
+        width:200px;
+        transition:0.3s;
+    }
+
+    img.jslogopic:hover{
+        opacity:80%;
+    }
+
+    img.phplogopic{
+        height:150px;
+        width:200px;
+        transition:0.3s;
+    }
+
+    img.phplogopic:hover{
+        opacity:80%;
+    }
+
+    img.aboutme_heading_image{
+        height:500px;
+        width:900px;
+        float:none;
+        margin-right:auto;
+        margin-left:auto;
+        display:block;
+    }
+
+    /*media querries for: 1550px, 1250px, 900px, and 750px*/
+
+    @media (max-width:900px){
+        #navigation_menu_container_alt{
+            height:500px;
+            width:300px;
+            margin-top:-1px;
+        }
+    }
+    
+    @media (max-width:900px){
+        #aboutme_link_container_alt{
+            float:left;
+        }
+    }
+    
+    @media (max-width:900px){
+        #home_link_container_alt{
+            margin-right:auto;
+            margin-left:auto;
+            display:block;
+        }
+    }
+    
+    @media (max-width:900px){
+        #aboutme_link_container_alt{
+            margin-top:50px;
+            margin-right:auto;
+            margin-left:auto;
+            display:block;
+            float:none;
+        }
+    }
+    
+    @media (max-width:900px){
+        #projects_link_container_alt{
+            margin-top:50px;
+            margin-right:auto;
+            margin-left:auto;
+            display:block;
+        }
+    }
+    
+    @media (max-width:900px){
+        #contacts_link_container_alt{
+            margin-top:50px;
+            margin-right:auto;
+            margin-left:auto;
+            display:block;
+            float:none;
+        }
+    }
+
+    @media (max-width:1550px){
+        #aboutmepage_maincontent_container_alt{
+            height:3000px;
+            width:auto;
+            margin-top:100px;
+        }
+    }
+
+    @media (max-width:1250px){
+        #aboutme_desc_para_alt{
+            font-size:150%;
+        }
+    }
+
+    @media (max-width:1250px){
+        #aboutme_educ_para_alt{
+            font-size:150%;
+        }
+    }
+
+    @media (max-width:1250px){
+        #aboutme_desc_heading_alt{
+            font-size:250%;
+        }
+    }
+
+    @media (max-width:1250px){
+        #aboutme_educ_heading_alt{
+            font-size:250%;
+        }
+    }
+
+    @media (max-width:1250px){
+        #table_container_alt{
+            width:auto;
+            height:auto;
+        }
+    }
+
+    @media (max-width:1556px){
+        #aboutmepage_maincontent_container_alt{
+            height:auto;
+        }
+    }
+
+    @media (max-width:1250px){
+        #skills_heading_alt{
+            font-size:250%;
+        }
+    }
+
+    @media (max-width:900px){
+        #htmllogopic_alt{
+            scale:60%;
+        }
+    }
+
+    @media (max-width:900px){
+        #csslogopic_alt{
+            scale:60%;
+        }
+    }
+
+    @media (max-width:900px){
+        #jslogopic_alt{
+            scale:60%;
+        }
+    }
+
+    @media (max-width:900px){
+        #phplogopic_alt{
+            scale:60%;
+        }
+    }
+
+    @media (max-width:900px){
+        #skills_container_alt{
+            height:auto;
+            width:auto;
+        }
+    }
+
+    @media (max-width:1250px){
+        #aboutme_heading_image_alt{
+            height:60%;
+            width:auto;
+        }
+    }
+
+    @media (max-width:750px){
+        #aboutme_heading_image_alt{
+            height:40%;
+            width:auto;
+            margin-top:80px;
+        }
+    }
