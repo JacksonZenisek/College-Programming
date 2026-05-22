@@ -24,11 +24,12 @@ Note: Short weeks are weeks that A and C shift don't work on Wednesdays. Long we
 """
 
 
-# Imported needed modules for color/style, and date fetcher: 
+# Imported needed modules date and turtle for the GUI window: 
 import datetime
 import turtle
 
 
+# Defined the main function:
 def main():
 
         
@@ -64,7 +65,7 @@ def main():
 
 
 
-
+# The conditions that determine to display either A, B, C, D shift, displays the date ands time (12hr clock), and lists the current week schedule for all four shifts:
     if current_day in (6, 0, 1) or (current_day == 2 and a_and_c_week):
             if day_start <= current_time <= day_end:
                 shift = "Current shift is: A Shift\n"
@@ -80,7 +81,6 @@ def main():
                 c_highlight()
                 word_layout(shift,time,weekly_schedule)
                 print(now)
-                
 
     elif current_day in (3, 4, 5) or (current_day == 2 and b_and_d_week):
             if day_start <= current_time <= day_end:
@@ -100,7 +100,8 @@ def main():
 
 #------------------PRIMARY CODE SECTION----------------------------
 #------------------GUI INTERFACE SECTION---------------------------
-    
+
+# The highlighter for A shift (red):
 def a_highlight():
 
     highlighterashift = turtle.Turtle()
@@ -119,6 +120,7 @@ def a_highlight():
         highlighterashift.right(90)
     highlighterashift.end_fill()
 
+# The highlighter for B shift (green):
 def b_highlight():
 
     highlighterbshift = turtle.Turtle()
@@ -137,6 +139,8 @@ def b_highlight():
         highlighterbshift.right(90)
     highlighterbshift.end_fill()
 
+
+# The highlighter for C shift (yellow):
 def c_highlight():
 
     highlightercshift = turtle.Turtle()
@@ -155,6 +159,8 @@ def c_highlight():
         highlightercshift.right(90)
     highlightercshift.end_fill()
 
+
+# The highlighter for D Shift (blue):
 def d_highlight():
 
     highlighterdshift = turtle.Turtle()
@@ -173,6 +179,7 @@ def d_highlight():
         highlighterdshift.right(90)
     highlighterdshift.end_fill()
 
+# The highlighter for the date and time (white):
 def time_highlight():
     timehighlighter = turtle.Turtle()
     timehighlighter.hideturtle()
@@ -191,7 +198,7 @@ def time_highlight():
     timehighlighter.end_fill()
 
 
-
+# The function for displaying the title of the program, the current shift that is working, the date and time, and the current weekly schedule:
 def word_layout(shift,time,weekly_schedule):
 
     screen = turtle.Screen()
@@ -227,11 +234,11 @@ def word_layout(shift,time,weekly_schedule):
     writer3.goto(0, -300)
     writer3.write(f"{weekly_schedule}", align="center", font=("Arial", 24))
 
-
+# The loops for the GUI window, and the exit function:
     screen.mainloop()
 
     screen.exitonclick()
     
-
+# Calls the main function:
 if __name__ == "__main__":
     main()
