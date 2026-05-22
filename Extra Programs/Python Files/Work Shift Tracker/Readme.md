@@ -2,7 +2,7 @@ The company that I work for has four shifts: A shift, B shift, C Shift, and D sh
 
 This program displays the current working shift based on this schedule:
 
-<p style=color:red>
+<p style="color:red">
 Short Week:
 Sunday - Tuesday 6:00am = 6:00pm = A shift
 Sunday - Tuesday 6:00pm = 6:00am = C shift
