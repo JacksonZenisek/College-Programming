@@ -1,7 +1,7 @@
 # Jackson Zenisek
 # Complete
 """
-This program calculates the total discount amount, and the total amount baed on the amount of software packages purchased with the users input.
+This program calculates the total discount amount, and the total amount based on the amount of software packages purchased with the users input.
 It is labeled with the dollar sign and rounds to the nearest two decimal places.
 """
 
