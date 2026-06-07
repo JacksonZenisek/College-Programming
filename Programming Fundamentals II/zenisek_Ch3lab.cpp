@@ -1,6 +1,6 @@
 // Jackson Zenisek
 // Complete
-// This program calculates the property tax, and assessed tax based on the input property tax.
+// This program calculates the property tax, and assessed tax based on the input property value.
 
 // Included the preprocessors:
 #include <iostream>
