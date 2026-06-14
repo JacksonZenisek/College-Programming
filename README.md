@@ -1,5 +1,5 @@
 <p><b>Welcome to my College Programming respository!</b></p>
-Here you will find all of my programming assignments from Austin Community College: Programming I, II, and III.
+Here you will find all of my programming assignments from Austin Community College: Programming Fundamentals I, II, and III.
 <br>
   <br>
 Content for Programming Fundamentals II is now out.
