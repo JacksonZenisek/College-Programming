@@ -5,3 +5,6 @@ Here you will find all of my programming assignments from Austin Community Colle
   <br>
 
 In the "Extra Programs" folders, there are more python and C++ programs that I personally programmed to help me with daily tasks and to also help me practice my programming skills, feel free to view those programs as well. You may even download them to test them.
+<br>
+  <br>
+  I have also recently included practice Linux Bash Scripting files in this repository to practice Linux scripting for my current position for my occupation.
