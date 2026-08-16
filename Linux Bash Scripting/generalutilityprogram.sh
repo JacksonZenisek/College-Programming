@@ -14,7 +14,7 @@ echo "What would you like to do?"
 echo "1) Get Device Information"
 echo "2) Get Website Information"
 echo "3) Troubleshoot A Problem"
-echo "4) Flush DNS Cache"
+echo "4) Update System Files"
 echo "0) Quit"
 
 read mainmenuoption
