@@ -269,6 +269,10 @@ echo " "
 echo "Please wait, scanning system..."
 scanandsaverepo=$(sudo clamscan ~/*)
 echo "$scanandsaverepo"
+echo " "
+echo " "
+echo "Would you like to save this scan information? (y = 1/n = 2):"
+read savescaninfo
 
 
 elif ((gettroubleshootopt==3)); then
@@ -379,7 +383,20 @@ fi
 
 }
 
+saveclamscaninformationchoice() {
 
+if ((savescaninfo==1)); then
+gettodaysdate=$(date)
+echo "$scanandsaverepo" > "clamavscanfor$gettodaysdate.txt"
+websitesavedtodirect=$(pwd)
+echo "Scan information saved to "$websitesavedtodirect"/clamavscanfor$gettodaysdate.txt"
+
+elif ((savescaninfo==1)); then
+
+exit
+
+fi
+}
 
 
 # Call functions
@@ -389,3 +406,4 @@ getwebmenusel
 gettoublessel
 getmiscmenusel
 savewebsiteipchoice
+saveclamscaninformationchoice
