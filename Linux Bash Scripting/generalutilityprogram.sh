@@ -14,6 +14,7 @@ echo "What would you like to do?"
 echo "1) Get Device Information"
 echo "2) Get Website Information"
 echo "3) Troubleshoot A Problem"
+echo "4) Flush DNS Cache"
 echo "0) Quit"
 
 read mainmenuoption
@@ -56,6 +57,12 @@ echo "4) Flush DNS Cache"
 echo "5) Change DNS Server"
 
 read gettroubleshootopt
+
+elif ((mainmenuoption==4)); then
+echo " "
+echo "Preparing to update system files..."
+sleep 3
+sudo apt update && sudo apt upgrade -y
 
 elif ((mainmenuoption==0)); then
 
