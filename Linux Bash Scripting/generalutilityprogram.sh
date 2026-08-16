@@ -55,6 +55,7 @@ echo "2) Install Antivirus/Run Scan"
 echo "3) Test Loopback Connection"
 echo "4) Flush DNS Cache"
 echo "5) Change DNS Server"
+echo "6) Change Device Password"
 
 read gettroubleshootopt
 
@@ -245,6 +246,11 @@ sleep 5
 echo "Please wait..."
 sleep 15
 sudo nano /etc/resolv.conf
+
+elif ((gettroubleshootopt==6)); then
+echo " "
+chgpass=$(passwd)
+echo "$chgpass"
 
 
 fi
