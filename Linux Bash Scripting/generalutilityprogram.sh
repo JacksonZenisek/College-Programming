@@ -15,6 +15,7 @@ echo "1) Get Device Information"
 echo "2) Get Website Information"
 echo "3) Troubleshoot A Problem"
 echo "4) Update System Files"
+echo "5) MISC"
 echo "0) Quit"
 
 read mainmenuoption
@@ -42,6 +43,9 @@ echo "What would you like to do?"
 echo "1) View status of a website"
 echo "2) Test connection of a website"
 echo "3) Get Source Code of a Website"
+echo "4) Generate QR code for a website"
+echo "5) View/browse a website in terminal"
+echo "6) Get IP adresses of a website"
 
 read getwebopt
 
@@ -64,6 +68,17 @@ echo " "
 echo "Preparing to update system files..."
 sleep 3
 sudo apt update && sudo apt upgrade -y
+
+
+elif ((mainmenuoption==5)); then
+echo " "
+echo "MISC"
+echo " "
+echo "What would you like to do?"
+echo "1) Check the weather"
+echo "2) Use the dictionary"
+
+read getmiscopt
 
 elif ((mainmenuoption==0)); then
 
@@ -184,9 +199,44 @@ read websitesrccodelink
 dwnldsrccode=$(wget $websitesrccodelink)
 echo "$dwnldsrccode"
 
+elif ((getwebopt==4)); then
+echo " "
+echo "Type in the website of QR code to be generated:"
+read webforqr
+createqr=$(curl qrenco.de/$webforqr)
+echo "$createqr"
+
+elif ((getwebopt==5)); then
+echo " "
+sudo apt install w3m
+echo " "
+echo "Enter the website you want to browse:"
+read websitelookuplink
+echo "Redirecting..."
+sleep 5
+w3m $websitelookuplink
+
+elif ((getwebopt==6)); then
+echo " "
+sudo apt install bind9-dnsutils
+echo " "
+echo "What website do you want IP addresses from?:"
+read websittoip
+echo "Getting IP addresses from $websittoip..."
+sleep 3
+websiteipdisplay=$(dig $websittoip)
+echo "$websiteipdisplay"
+echo " "
+echo " "
+echo "would you like to save this information? (y = 1/n = 2):"
+read savewebip
 
 fi
 }
+
+
+
+#Troubleshoot a problem menu conditions
 
 gettoublessel() {
 
@@ -257,8 +307,85 @@ fi
 }
 
 
+#MISC menu conditions
+
+getmiscmenusel() {
+
+if ((getmiscopt==1)); then
+echo "Use caution when editing this file."
+echo "Look for something like 'nameserver x.x.x.x' and replace it with something like this 'nameserver 8.8.8.8','nameserver 192.168.1.1', or 'nameserver 9.9.9.9'."
+sleep 5
+echo "Please wait..."
+sleep 15
+sudo nano /etc/resolv.conf
+
+elif ((gettroubleshootopt==6)); then
+echo " "
+chgpass=$(passwd)
+echo "$chgpass"
+
+
+fi
+}
+
+
+#MISC menu conditions
+
+getmiscmenusel() {
+
+if ((getmiscopt==1)); then
+
+echo " "
+echo "Type in a city, airport code, or zip code to get the weather forcast:"
+read weatherlocation
+echo
+echo " "
+echo "Getting weather information for $weatherlocation..."
+sleep 5
+getweather=$(curl wttr.in/$weatherlocation)
+echo "$getweather"
+
+elif ((getmiscopt==2)); then
+echo " "
+sudo apt install dict
+echo " "
+echo "What word do you want to look up?:"
+read lookupword
+echo " "
+echo "Result for $lookupword"
+echo " "
+dict $lookupword
+
+
+fi
+}
+
+
+#Save website IP to log file conditions
+
+savewebsiteipchoice() {
+
+if ((savewebip==1)); then
+echo "$websiteipdisplay" > "ipaddressfor$websittoip.txt"
+websitesavedtodirect=$(pwd)
+echo "Information saved to "$websitesavedtodirect"/ipaddressfor$websittoip.txt"
+
+
+elif ((savewebip==2)); then
+
+exit
+
+fi
+
+}
+
+
+
+
 # Call functions
 mainmenu
 getdevmenusel
 getwebmenusel
 gettoublessel
+getmiscmenusel
+savewebsiteipchoice
