@@ -78,8 +78,6 @@ echo "VIEW DRIVE STORAGE"
 echo " "
 echo "What would you like to do?"
 echo "1) View storage on all drives"
-echo "What would you like to do?"
-echo "1) View storage on all drives"
 echo "2) View storage on C drive only"
 
 read storagesel
