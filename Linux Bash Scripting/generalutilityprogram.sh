@@ -205,6 +205,9 @@ echo "Type in the website of QR code to be generated:"
 read webforqr
 createqr=$(curl qrenco.de/$webforqr)
 echo "$createqr"
+echo "Would you like to save this qr code? (y = 1/n = 2):"
+read saveqrchoice
+
 
 elif ((getwebopt==5)); then
 echo " "
@@ -398,6 +401,19 @@ exit
 fi
 }
 
+savewebqr() {
+
+if ((saveqrchoice==1)); then
+echo "$createqr" > "QRcode_$webforqr.jpg"
+qrcodeofwebsitedirect=$(pwd)
+echo "QR code saved to "$qrcodeofwebsitedirect"/QRcode_$webforqr.jpg"
+
+elif ((saveqrchoice==2)); then
+
+exit
+
+fi
+}
 
 # Call functions
 mainmenu
@@ -407,3 +423,4 @@ gettoublessel
 getmiscmenusel
 savewebsiteipchoice
 saveclamscaninformationchoice
+savewebqr
