@@ -1,4 +1,6 @@
 <b>Welcome to my XMRig Utility Tool!<b>
+<br>
+  <br>
 This file is very special to me. I used to be a CPU crypto miner and I used XMRig, but I remember how challenging it could be to remember the commands to properly run XMRig. I developed a linux shell script to automatically install XMRig without having to input multiple commands into terminal.
 <br>
   <br>
