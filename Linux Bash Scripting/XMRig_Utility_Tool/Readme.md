@@ -1,4 +1,4 @@
-<b>Welcome to my XMRig Utility Tool!<b>
+<b>Welcome to my XMRig Automation Utility Tool!<b>
 <br>
   <br>
 This file is very special to me. I used to be a CPU crypto miner and I used XMRig, but I remember how challenging it could be to remember the commands to properly run XMRig. 
