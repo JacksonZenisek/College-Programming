@@ -9,4 +9,5 @@ My Program can do the following tasks:
 - Generate new Monero XMR wallet keys, and save them to log files.
 - View the user guide on how to run my program
   <br>
+    <br>
 I hope this program will be helpful to anyone who wants to mine Monero XMR with their CPUs, or if you just want to experiment with it. That's cool too.
