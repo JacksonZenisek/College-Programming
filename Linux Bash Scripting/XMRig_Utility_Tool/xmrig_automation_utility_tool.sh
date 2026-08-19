@@ -5,7 +5,7 @@
 
 mainmenu() {
 echo "----------------------------"
-echo "XMRIG UTILITY TOOL"
+echo "XMRIG AUTOMATION UTILITY TOOL"
 echo "Developed by Jackson Zenisek"
 echo "----------------------------"
 echo " "
