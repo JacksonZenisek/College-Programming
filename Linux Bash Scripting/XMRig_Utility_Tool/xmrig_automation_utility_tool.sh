@@ -1,11 +1,13 @@
 #!/bin/bash
 # A hopefully helpful utility tool for xmrig miners.
 # Developed by Jackson Zenisek
-# Last updated: 8/18/2026
+# V1.1
+# Last updated: 8/27/2026
 
 mainmenu() {
 echo "----------------------------"
 echo "XMRIG UTILITY TOOL"
+echo "V1.1"
 echo "Developed by Jackson Zenisek"
 echo "----------------------------"
 echo " "
@@ -55,8 +57,8 @@ git clone https://github.com/xmrig/xmrig.git
 echo "Entering subdirectories..."
 sleep 2
 cd xmrig
-mkdir build
-cd build
+mkdir xmrig_launcher
+cd xmrig_launcher
 cmake ..
 echo "Preparing to install XMRig..."
 sleep 5
@@ -71,11 +73,10 @@ if ((installxmrigchoice==2)); then
 echo " "
 echo " "
 showcurrentdirectory=$(pwd)
-echo "Here is your current directory:"
-echo "$showcurrentdirectory "
-echo " "
 showfolders=$(ls -d */)
+echo " "
 echo "Here are some nearby folder options:"
+echo "$showcurrentdirectory (current directory)"
 echo "$showfolders"
 echo " "
 echo "Enter the directory that you want to install XMRig in:"
@@ -99,8 +100,8 @@ git clone https://github.com/xmrig/xmrig.git
 echo "Entering subdirectories..."
 sleep 2
 cd xmrig
-mkdir build
-cd build
+mkdir xmrig_launcher
+cd xmrig_launcher
 cmake ..
 echo "Preparing to install XMRig..."
 sleep 5
@@ -150,10 +151,14 @@ read adminprev
 
 elif ((wherexmriginstalled==2)); then
 echo " "
-echo "Enter the directory XMRig is installed in:"
-read entereddirectoryyy
-cd $entereddirectoryyy
-echo "Entering $entereddirectoryyy ..."
+echo "Searching for XMRig directory, please wait..."
+sleep 2
+echo " "
+findxmrig=$(sudo find /home -type d -name "*xmrig_launcher*" 2>/dev/null | head -n 3)
+echo "XMrig found at: $findxmrig"
+cd $findxmrig
+echo " "
+echo "Entering $findxmrig"
 sleep 2
 echo " "
 echo "Enter your wallet key:"
@@ -252,8 +257,8 @@ echo " "
 echo "Preparing to download Monero wallet generator ..."
 sleep 3
 wget https://downloads.getmonero.org/linux64
-mkdir monero && tar -xjvf linux64 -C monero
-cd monero/*
+mkdir monero_wallet_generator && tar -xjvf linux64 -C monero_wallet_generator
+cd monero_wallet_generator/*
 echo " "
 echo "Installation complete!"
 
@@ -261,11 +266,11 @@ echo "Installation complete!"
 elif ((walletgendirchoice==2)); then
 echo " "
 showcurrentdirectory=$(pwd)
-echo "Here is your current directory:"
-echo "$showcurrentdirectory"
 echo " "
 showfolders=$(ls -d */)
+echo " "
 echo "Here are some nearby folder options:"
+echo "$showcurrentdirectory (current directory)"
 echo "$showfolders"
 echo " "
 echo "Enter the directory that you want to install Monero wallet generator:"
@@ -277,20 +282,27 @@ sleep 2
 echo "Preparing to download Monero wallet generator ..."
 sleep 3
 wget https://downloads.getmonero.org/linux64
-mkdir monero && tar -xjvf linux64 -C monero
-cd monero/*
+mkdir monero_wallet_generator && tar -xjvf linux64 -C monero_wallet_generator
+cd monero_wallet_generator/*
 echo " "
 echo "Installation complete!"
 
 
 elif ((walletgendirchoice==3)); then
 echo " "
-echo "Enter the directory that Monero wallet generator is installed in:"
-read installedmonerogendir
-cd $installedmonerogendir
-cd monero/*
+echo "Searching for the location of Monero wallet generator..."
+echo " "
+sleep 2
+findxmrigwalgen=$(sudo find /home -type d -name "*monero-x86_64-linux-gnu-v0.18.5.1*" 2>/dev/null | head -n 1)
+echo "Monero wallet generator found at: $findxmrigwalgen"
+echo " "
+echo "Entering $findxmrigwalgen"
+sleep 2
+echo " "
+echo " "
+cd $findxmrigwalgen
 sudo ./monero-wallet-cli
-echo" "
+echo " "
 echo "Would you like to save your wallet key to a file? y = 1/n = 2:"
 read savekeychoice
 fi
@@ -298,8 +310,16 @@ fi
 
 if ((savekeychoice==1)); then
 echo " "
-echo " Enter your kwallet key:"
+echo " Enter your wallet key:"
 read vdfvdvddcvregehbe
+echo " "
+echo " "
+showcurrentdirectory=$(pwd)
+showfolders=$(ls -d */)
+echo " "
+echo "Here are some nearby folder options:"
+echo "$showcurrentdirectory (current directory)"
+echo "$showfolders"
 echo " "
 echo "What directory would you like to save the file?:"
 read savekeydirect
